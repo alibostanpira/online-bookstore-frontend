@@ -1,12 +1,27 @@
 <header>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/books">Books</a></li>
-      <li><a href="/cart">Cart</a></li>
-      <li><a href="/profile">Profile</a></li>
-      <li><a href="/admin">Admin</a></li>
+      <li><a href="/" matTooltip="Home">
+        <mat-icon>home</mat-icon>
+      </a></li>
+      <li><a href="/books" matTooltip="Books">
+        <mat-icon>view_list</mat-icon>
+      </a></li>
+      <li><a href="/cart" matTooltip="Cart">
+        <mat-icon>shopping_cart</mat-icon>
+      </a></li>
+      <li><a href="/profile" matTooltip="Profile">
+        <mat-icon>account_circle</mat-icon>
+      </a></li>
+      <li><a href="/admin" matTooltip="Admin">
+        <mat-icon>admin_panel_settings</mat-icon>
+      </a></li>
     </ul>
   </nav>
-  <button (click)="toggleTheme()">Toggle Theme</button>
+  <p style="font-style: italic">Reading is to the mind<br>what exercise is to the <br>body. — Joseph Addison</p>
+  <img ngSrc="books.jpg" alt="Books" class="header-logo" height="151" width="800">
+  <p>Welcome to this amazing<br>BOOKSTORE, wishing you<br>a successful search for your<br> favorite book.</p>
+  <button (click)="toggleTheme()" matTooltip="Dark/Light">
+    <mat-icon>{{ isDarkTheme ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
 </header>

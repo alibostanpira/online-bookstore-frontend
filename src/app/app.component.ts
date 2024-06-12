@@ -21,5 +21,6 @@ export class AppComponent {
     } else {
       document.body.classList.remove('dark-theme');
     }
+    return this.isDarkTheme;
   }
 }
